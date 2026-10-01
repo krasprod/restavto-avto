@@ -375,12 +375,14 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
 .sister a{color:var(--green-text);font-weight:700;text-decoration:none;white-space:nowrap}
 .sister a:hover{text-decoration:underline}
 
+.form .sub{font-size:14.5px;color:var(--muted);margin:-8px 0 20px}
 .form .err{display:block;margin-top:10px;color:#b3261e;font-size:14px;text-align:center}
 
 @media (max-width:1024px){.alls{grid-template-columns:repeat(2,1fr)}.more{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){
   .alls,.more{grid-template-columns:1fr}
-  .sister{flex-direction:column;align-items:flex-start;gap:10px}
+  .sister{flex-direction:column;align-items:stretch;gap:10px}
+  .sister p,.sister a{width:100%}
   .ptable th,.ptable td{padding:12px 14px;font-size:14px}
 }
 
@@ -461,7 +463,7 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
   </div>
 </section>
 
-<section class="extra">
+<section class="services">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Що входить</div><h2>Що робимо під час заміни</h2></div></div>
     <div class="steps-grid">
@@ -515,16 +517,16 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
 
 
 
-<section class="extra" id="faq">
+<section id="faq">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Питання</div><h2>Часті питання</h2></div></div>
-    <details class="faq"><summary>Можна зі своїм мастилом?</summary><p>Так, приїжджайте зі своїм мастилом і фільтрами, тоді платите тільки за роботу. Якщо підбираємо ми, скажемо вартість разом із матеріалами.</p></details><details class="faq"><summary>Чи міняєте мастило в АКПП?</summary><p>Так. Для автоматів важливий і допуск рідини, і спосіб заміни. На частині коробок часткова заміна безпечніша за повну промивку, це залежить від стану і пробігу.</p></details><details class="faq"><summary>Скільки це триває?</summary><p>Заміна в двигуні зазвичай до години. Коробка довша, особливо якщо треба знімати піддон і міняти фільтр усередині.</p></details><details class="faq"><summary>Чи треба міняти мастило в механічній коробці?</summary><p>Так, хоч про це часто забувають. Стара рідина в механіці дає гул і важке включення передач, а в підсумку знос синхронізаторів.</p></details>
+    <div class="faq-list"><details class="faq"><summary>Можна зі своїм мастилом?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Так, приїжджайте зі своїм мастилом і фільтрами, тоді платите тільки за роботу. Якщо підбираємо ми, скажемо вартість разом із матеріалами.</div></details><details class="faq"><summary>Чи міняєте мастило в АКПП?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Так. Для автоматів важливий і допуск рідини, і спосіб заміни. На частині коробок часткова заміна безпечніша за повну промивку, це залежить від стану і пробігу.</div></details><details class="faq"><summary>Скільки це триває?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Заміна в двигуні зазвичай до години. Коробка довша, особливо якщо треба знімати піддон і міняти фільтр усередині.</div></details><details class="faq"><summary>Чи треба міняти мастило в механічній коробці?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Так, хоч про це часто забувають. Стара рідина в механіці дає гул і важке включення передач, а в підсумку знос синхронізаторів.</div></details></div>
   </div>
 </section>
 
 
 
-<section class="extra">
+<section class="services">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Ще на СТО</div><h2>Інші роботи, які часто роблять разом</h2></div></div>
     <div class="more"><a href="../zamina-grm-u-lvovi/"><b>Заміна ГРМ</b><span>Ремінь або ланцюг, помпа і сальники за один візит</span></a><a href="../zamina-remont-zcheplennya/"><b>Зчеплення</b><span>Комплект, циліндри, тросик, прокачування гідроприводу</span></a><a href="../remont-turbin/"><b>Ремонт турбін</b><span>Дефектування, ремкомплект, балансування ротора</span></a><a href="../remont-rulovyh-reyok/"><b>Рульові рейки</b><span>Ремонт і реставрація рейки, насоса, колонки</span></a></div>

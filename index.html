@@ -375,12 +375,14 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
 .sister a{color:var(--green-text);font-weight:700;text-decoration:none;white-space:nowrap}
 .sister a:hover{text-decoration:underline}
 
+.form .sub{font-size:14.5px;color:var(--muted);margin:-8px 0 20px}
 .form .err{display:block;margin-top:10px;color:#b3261e;font-size:14px;text-align:center}
 
 @media (max-width:1024px){.alls{grid-template-columns:repeat(2,1fr)}.more{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){
   .alls,.more{grid-template-columns:1fr}
-  .sister{flex-direction:column;align-items:flex-start;gap:10px}
+  .sister{flex-direction:column;align-items:stretch;gap:10px}
+  .sister p,.sister a{width:100%}
   .ptable th,.ptable td{padding:12px 14px;font-size:14px}
 }
 
@@ -533,7 +535,7 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
   </div>
 </section>
 
-<section class="extra">
+<section class="services">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Повний перелік</div><h2>Усі роботи по авто в одному місці</h2></div></div>
     <div class="alls">
@@ -559,14 +561,14 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
   </div>
 </section>
 
-<section class="why" id="why">
+<section id="why">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Чому ми</div><h2>Чим відрізняємось від звичайного сервісу</h2></div></div>
     <div class="why-grid">
-      <div class="who"><div class="ic"><svg><use href="#i-wrench"/></svg></div><h3>Свій цех реставрації</h3><p>Турбіни, рульові рейки, стартери і генератори відновлюємо самі, а не відправляємо підряднику. Тому ремонт дешевший за нову деталь і робиться швидше.</p></div>
-      <div class="who"><div class="ic"><svg><use href="#i-card"/></svg></div><h3>Ціна до робіт, а не після</h3><p>Спочатку діагностика і дефектування, потім сума. Якщо в процесі зʼявляється щось понад домовлене, спершу дзвонимо, а не ставимо перед фактом у касі.</p></div>
-      <div class="who"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>Гарантія від 6 до 12 місяців</h3><p>На роботи і на деталі, які ставимо самі. Гарантійний випадок розглядаємо на місці, без листування і пересилок.</p></div>
-      <div class="who"><div class="ic"><svg><use href="#i-plus"/></svg></div><h3>Запчастини на місці</h3><p>Понад 500 позицій нових і реставрованих деталей у власному магазині. Часто не треба чекати доставку і ставити авто на паузу.</p></div>
+      <div class="why"><div class="ic"><svg><use href="#i-wrench"/></svg></div><h3>Свій цех реставрації</h3><p>Турбіни, рульові рейки, стартери і генератори відновлюємо самі, а не відправляємо підряднику. Тому ремонт дешевший за нову деталь і робиться швидше.</p></div>
+      <div class="why"><div class="ic"><svg><use href="#i-card"/></svg></div><h3>Ціна до робіт, а не після</h3><p>Спочатку діагностика і дефектування, потім сума. Якщо в процесі зʼявляється щось понад домовлене, спершу дзвонимо, а не ставимо перед фактом у касі.</p></div>
+      <div class="why"><div class="ic"><svg><use href="#i-shield"/></svg></div><h3>Гарантія від 6 до 12 місяців</h3><p>На роботи і на деталі, які ставимо самі. Гарантійний випадок розглядаємо на місці, без листування і пересилок.</p></div>
+      <div class="why"><div class="ic"><svg><use href="#i-plus"/></svg></div><h3>Запчастини на місці</h3><p>Понад 500 позицій нових і реставрованих деталей у власному магазині. Часто не треба чекати доставку і ставити авто на паузу.</p></div>
     </div>
   </div>
 </section>
@@ -616,10 +618,10 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
 
 
 
-<section class="extra" id="faq">
+<section id="faq">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Питання</div><h2>Часті питання</h2></div></div>
-    <details class="faq"><summary>Чи потрібен запис заздалегідь?</summary><p>На діагностику і дрібні роботи часто беремо в день звернення, але краще подзвонити. На заміну ГРМ, зчеплення чи ремонт вузла записуємо на конкретний день, щоб авто не стояло в черзі.</p></details><details class="faq"><summary>Можна приїхати зі своїми запчастинами?</summary><p>Так. У такому разі гарантія діє на нашу роботу, а на саму деталь гарантію дає той, у кого ви її купили. Якщо запчастину підбираємо ми, гарантія від 6 до 12 місяців покриває і деталь, і роботу.</p></details><details class="faq"><summary>Скільки триває діагностика?</summary><p>Ходової і двигуна зазвичай до години. Компʼютерна швидше. Повна перевірка перед купівлею авто довша, бо дивимось і кузов, і геометрію, і електроніку.</p></details><details class="faq"><summary>Ви працюєте з мікроавтобусами?</summary><p>Так, обслуговуємо легкові авто і мікроавтобуси, дизель і бензин. По екзотиці і ретро питайте окремо, беремось не за все.</p></details><details class="faq"><summary>Чи даєте документи на роботу?</summary><p>Так, після робіт видаємо документ із переліком зробленого і встановлених деталей. Він же потрібен, якщо колись виникне гарантійне питання.</p></details>
+    <div class="faq-list"><details class="faq"><summary>Чи потрібен запис заздалегідь?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">На діагностику і дрібні роботи часто беремо в день звернення, але краще подзвонити. На заміну ГРМ, зчеплення чи ремонт вузла записуємо на конкретний день, щоб авто не стояло в черзі.</div></details><details class="faq"><summary>Можна приїхати зі своїми запчастинами?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Так. У такому разі гарантія діє на нашу роботу, а на саму деталь гарантію дає той, у кого ви її купили. Якщо запчастину підбираємо ми, гарантія від 6 до 12 місяців покриває і деталь, і роботу.</div></details><details class="faq"><summary>Скільки триває діагностика?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Ходової і двигуна зазвичай до години. Компʼютерна швидше. Повна перевірка перед купівлею авто довша, бо дивимось і кузов, і геометрію, і електроніку.</div></details><details class="faq"><summary>Ви працюєте з мікроавтобусами?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Так, обслуговуємо легкові авто і мікроавтобуси, дизель і бензин. По екзотиці і ретро питайте окремо, беремось не за все.</div></details><details class="faq"><summary>Чи даєте документи на роботу?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Так, після робіт видаємо документ із переліком зробленого і встановлених деталей. Він же потрібен, якщо колись виникне гарантійне питання.</div></details></div>
   </div>
 </section>
 

@@ -375,12 +375,14 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
 .sister a{color:var(--green-text);font-weight:700;text-decoration:none;white-space:nowrap}
 .sister a:hover{text-decoration:underline}
 
+.form .sub{font-size:14.5px;color:var(--muted);margin:-8px 0 20px}
 .form .err{display:block;margin-top:10px;color:#b3261e;font-size:14px;text-align:center}
 
 @media (max-width:1024px){.alls{grid-template-columns:repeat(2,1fr)}.more{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){
   .alls,.more{grid-template-columns:1fr}
-  .sister{flex-direction:column;align-items:flex-start;gap:10px}
+  .sister{flex-direction:column;align-items:stretch;gap:10px}
+  .sister p,.sister a{width:100%}
   .ptable th,.ptable td{padding:12px 14px;font-size:14px}
 }
 
@@ -481,14 +483,14 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
   </div>
 </section>
 
-<section class="extra">
+<section class="services">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Що робимо</div><h2>З чого складається ремонт</h2></div></div>
     <div class="why-grid">
-      <div class="who"><div class="ic"><svg><use href="#i-cpu"/></svg></div><h3>Дефектування</h3><p>Люфти вала, стан крильчаток, хід геометрії та актуатора. Після розбирання видно, чи це ремонт, чи вже заміна.</p></div>
-      <div class="who"><div class="ic"><svg><use href="#i-wrench"/></svg></div><h3>Ремкомплект</h3><p>Підшипники, ущільнення, упорні кільця. Вал шліфуємо, корпуси чистимо від нагару і мастила.</p></div>
-      <div class="who"><div class="ic"><svg><use href="#i-gear"/></svg></div><h3>Геометрія і актуатор</h3><p>Лопатки VNT розхожуються і закисають, через це пропадає тяга і сиплються помилки. Чистимо, відновлюємо хід, налаштовуємо привід.</p></div>
-      <div class="who"><div class="ic"><svg><use href="#i-bolt"/></svg></div><h3>Балансування</h3><p>Ротор балансуємо на стенді. Без цього навіть нові підшипники довго не ходять, починається вібрація і знову підтікання.</p></div>
+      <div class="why"><div class="ic"><svg><use href="#i-cpu"/></svg></div><h3>Дефектування</h3><p>Люфти вала, стан крильчаток, хід геометрії та актуатора. Після розбирання видно, чи це ремонт, чи вже заміна.</p></div>
+      <div class="why"><div class="ic"><svg><use href="#i-wrench"/></svg></div><h3>Ремкомплект</h3><p>Підшипники, ущільнення, упорні кільця. Вал шліфуємо, корпуси чистимо від нагару і мастила.</p></div>
+      <div class="why"><div class="ic"><svg><use href="#i-gear"/></svg></div><h3>Геометрія і актуатор</h3><p>Лопатки VNT розхожуються і закисають, через це пропадає тяга і сиплються помилки. Чистимо, відновлюємо хід, налаштовуємо привід.</p></div>
+      <div class="why"><div class="ic"><svg><use href="#i-bolt"/></svg></div><h3>Балансування</h3><p>Ротор балансуємо на стенді. Без цього навіть нові підшипники довго не ходять, починається вібрація і знову підтікання.</p></div>
     </div>
     <div class="sister">
       <p>Докладніше про ремонт турбін, із цінами, строками і поясненням кожного етапу, ми зібрали на окремому сайті.</p>
@@ -518,16 +520,16 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
 
 
 
-<section class="extra" id="faq">
+<section id="faq">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Питання</div><h2>Часті питання</h2></div></div>
-    <details class="faq"><summary>Чому ціну не кажете одразу?</summary><p>Поки турбіна не розібрана, видно тільки симптом. Два однакових мотори можуть вимагати різних робіт: одному досить ремкомплекту, іншому потрібна геометрія і вал. Суму кажемо після дефектування, до початку робіт.</p></details><details class="faq"><summary>Ви знімаєте турбіну самі?</summary><p>Так, знімаємо і ставимо назад на нашому ж СТО. Якщо турбіну вже зняли до нас, беремо вузол окремо.</p></details><details class="faq"><summary>Чому турбіна зламалась?</summary><p>Найчастіше через мастило: несвоєчасна заміна, забитий сітчастий фільтр, зношена помпа. Тому разом із ремонтом радимо подивитись систему змащення, інакше нова турбіна піде тим самим шляхом.</p></details>
+    <div class="faq-list"><details class="faq"><summary>Чому ціну не кажете одразу?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Поки турбіна не розібрана, видно тільки симптом. Два однакових мотори можуть вимагати різних робіт: одному досить ремкомплекту, іншому потрібна геометрія і вал. Суму кажемо після дефектування, до початку робіт.</div></details><details class="faq"><summary>Ви знімаєте турбіну самі?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Так, знімаємо і ставимо назад на нашому ж СТО. Якщо турбіну вже зняли до нас, беремо вузол окремо.</div></details><details class="faq"><summary>Чому турбіна зламалась?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Найчастіше через мастило: несвоєчасна заміна, забитий сітчастий фільтр, зношена помпа. Тому разом із ремонтом радимо подивитись систему змащення, інакше нова турбіна піде тим самим шляхом.</div></details></div>
   </div>
 </section>
 
 
 
-<section class="extra">
+<section class="services">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Ще на СТО</div><h2>Інші роботи, які часто роблять разом</h2></div></div>
     <div class="more"><a href="../zamina-grm-u-lvovi/"><b>Заміна ГРМ</b><span>Ремінь або ланцюг, помпа і сальники за один візит</span></a><a href="../zamina-remont-zcheplennya/"><b>Зчеплення</b><span>Комплект, циліндри, тросик, прокачування гідроприводу</span></a><a href="../remont-rulovyh-reyok/"><b>Рульові рейки</b><span>Ремонт і реставрація рейки, насоса, колонки</span></a><a href="../zamina-mastyla/"><b>Заміна мастила</b><span>Двигун і КПП, з фільтрами і перевіркою рівнів</span></a></div>

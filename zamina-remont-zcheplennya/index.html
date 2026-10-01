@@ -375,12 +375,14 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
 .sister a{color:var(--green-text);font-weight:700;text-decoration:none;white-space:nowrap}
 .sister a:hover{text-decoration:underline}
 
+.form .sub{font-size:14.5px;color:var(--muted);margin:-8px 0 20px}
 .form .err{display:block;margin-top:10px;color:#b3261e;font-size:14px;text-align:center}
 
 @media (max-width:1024px){.alls{grid-template-columns:repeat(2,1fr)}.more{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){
   .alls,.more{grid-template-columns:1fr}
-  .sister{flex-direction:column;align-items:flex-start;gap:10px}
+  .sister{flex-direction:column;align-items:stretch;gap:10px}
+  .sister p,.sister a{width:100%}
   .ptable th,.ptable td{padding:12px 14px;font-size:14px}
 }
 
@@ -496,7 +498,7 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
   </div>
 </section>
 
-<section class="extra">
+<section class="services">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Як робимо</div><h2>Що входить у роботу</h2></div></div>
     <div class="steps-grid">
@@ -530,16 +532,16 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
 
 
 
-<section class="extra" id="faq">
+<section id="faq">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Питання</div><h2>Часті питання</h2></div></div>
-    <details class="faq"><summary>Скільки ходить зчеплення?</summary><p>Залежить від манери їзди і умов. У місті з частими пробками і пробуксовками ресурс помітно менший. Точніше скаже лише огляд вузла.</p></details><details class="faq"><summary>Чи обовʼязково міняти маховик?</summary><p>Ні. Міняємо лише коли він має знос чи люфт, який не дасть новому комплекту нормально працювати. Якщо маховик цілий, лишаємо його.</p></details><details class="faq"><summary>Авто не їде, можна притягнути?</summary><p>Так, беремо авто на буксирі або евакуатором. Заздалегідь подзвоніть, щоб ми звільнили підйомник під вашу машину.</p></details><details class="faq"><summary>Чи можна поремонтувати, а не міняти?</summary><p>Іноді так. Якщо справа в циліндрі, тросику чи гідроприводі, ремонт обходиться дешевше за комплект. Саме тому починаємо з перевірки, а не з заміни.</p></details>
+    <div class="faq-list"><details class="faq"><summary>Скільки ходить зчеплення?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Залежить від манери їзди і умов. У місті з частими пробками і пробуксовками ресурс помітно менший. Точніше скаже лише огляд вузла.</div></details><details class="faq"><summary>Чи обовʼязково міняти маховик?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Ні. Міняємо лише коли він має знос чи люфт, який не дасть новому комплекту нормально працювати. Якщо маховик цілий, лишаємо його.</div></details><details class="faq"><summary>Авто не їде, можна притягнути?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Так, беремо авто на буксирі або евакуатором. Заздалегідь подзвоніть, щоб ми звільнили підйомник під вашу машину.</div></details><details class="faq"><summary>Чи можна поремонтувати, а не міняти?<i><svg><use href="#i-plus"/></svg></i></summary><div class="a">Іноді так. Якщо справа в циліндрі, тросику чи гідроприводі, ремонт обходиться дешевше за комплект. Саме тому починаємо з перевірки, а не з заміни.</div></details></div>
   </div>
 </section>
 
 
 
-<section class="extra">
+<section class="services">
   <div class="wrap">
     <div class="sec-head"><div><div class="eyebrow">Ще на СТО</div><h2>Інші роботи, які часто роблять разом</h2></div></div>
     <div class="more"><a href="../zamina-grm-u-lvovi/"><b>Заміна ГРМ</b><span>Ремінь або ланцюг, помпа і сальники за один візит</span></a><a href="../remont-turbin/"><b>Ремонт турбін</b><span>Дефектування, ремкомплект, балансування ротора</span></a><a href="../remont-rulovyh-reyok/"><b>Рульові рейки</b><span>Ремонт і реставрація рейки, насоса, колонки</span></a><a href="../zamina-mastyla/"><b>Заміна мастила</b><span>Двигун і КПП, з фільтрами і перевіркою рівнів</span></a></div>

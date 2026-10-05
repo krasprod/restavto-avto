@@ -375,6 +375,19 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
 .sister a{color:var(--green-text);font-weight:700;text-decoration:none;white-space:nowrap}
 .sister a:hover{text-decoration:underline}
 
+/* картка закладу поверх карти (свій варіант, без ключа Google) */
+.map{position:relative}
+.gcard{position:absolute;left:16px;top:16px;z-index:2;width:270px;max-width:calc(100% - 32px);
+  background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(11,15,10,.18);padding:16px 18px}
+.gcard b{display:block;font:800 15px/1.3 var(--font-h);color:var(--ink);margin-bottom:6px}
+.gcard p{margin:0 0 8px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.gcard .rate{display:flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ink);margin-bottom:10px}
+.gcard .rate i{color:#f5a623;font-style:normal;letter-spacing:1px}
+.gcard .rate span{color:var(--muted)}
+.gcard a{display:inline-flex;align-items:center;gap:6px;font:700 13.5px var(--font-h);
+  color:var(--green-text);text-decoration:none}
+.gcard a:hover{text-decoration:underline}
+@media (max-width:640px){.gcard{position:static;width:auto;max-width:none;margin:0 0 12px;box-shadow:none;border:1px solid var(--line)}}
 .form .sub{font-size:14.5px;color:var(--muted);margin:-8px 0 20px}
 .form .err{display:block;margin-top:10px;color:#b3261e;font-size:14px;text-align:center}
 
@@ -640,6 +653,12 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
         <div class="c-row"><div class="ic"><svg><use href="#i-star"/></svg></div><div><small>Відгуки і соцмережі</small><div class="social"><a href="https://g.page/restavto?share" target="_blank" rel="noopener">Google</a><a href="https://www.facebook.com/restavtolviv" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/rest_avto_lviv/" target="_blank" rel="noopener">Instagram</a></div></div></div>
       </div>
       <div class="map">
+        <div class="gcard">
+          <b>REST AVTO</b>
+          <p>Реставрація рульових рейок, насосів ГПК, турбін. СТО, автосервіс<br>вул. Грунтова, 1б, Львів<br>Пн–Сб, 9:00–18:00</p>
+          <div class="rate">4,5 <i>★★★★★</i> <span>371 відгук</span></div>
+          <a href="https://maps.app.goo.gl/HUG4TYdgAisS7MVb8" target="_blank" rel="noopener">Відкрити в Google Картах</a>
+        </div>
         <iframe src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1s49.7815782,24.0712667!6i17!3m1!1suk!5m1!1suk" loading="lazy" title="Rest Avto на карті" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>

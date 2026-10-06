@@ -165,6 +165,19 @@ nav.main a:hover::after{transform:scaleX(1)}
 .form .btn{width:100%;margin-top:6px}
 .form small{display:block;text-align:center;font-size:12.5px;color:var(--muted);margin-top:12px}
 .form .ok{display:none;text-align:center;padding:30px 10px}
+/* картка закладу поверх карти (свій варіант, без ключа Google) */
+.map{position:relative}
+.gcard{position:absolute;left:16px;top:16px;z-index:2;width:270px;max-width:calc(100% - 32px);
+  background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(11,15,10,.18);padding:16px 18px}
+.gcard b{display:block;font:800 15px/1.3 var(--font-h);color:var(--ink);margin-bottom:6px}
+.gcard p{margin:0 0 8px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.gcard .rate{display:flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ink);margin-bottom:10px}
+.gcard .rate i{color:#f5a623;font-style:normal;letter-spacing:1px}
+.gcard .rate span{color:var(--muted)}
+.gcard a{display:inline-flex;align-items:center;gap:6px;font:700 13.5px var(--font-h);
+  color:var(--green-text);text-decoration:none}
+.gcard a:hover{text-decoration:underline}
+@media (max-width:640px){.gcard{position:static;width:auto;max-width:none;margin:0 0 12px;box-shadow:none;border:1px solid var(--line)}}
 .form .ok svg{width:56px;height:56px;stroke:var(--green);margin:0 auto 14px}
 .form.sent form{display:none}.form.sent .ok{display:block}
 
@@ -627,6 +640,20 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
   window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>10)});
   var burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
   burger.addEventListener('click',function(){mnav.classList.toggle('open')});
+
+  function phDigits(v){var d=String(v||'').replace(/\D/g,'');
+    if(d.indexOf('380')===0){d=d.slice(3)}else if(d.indexOf('0')===0){d=d.slice(1)}
+    if(d.length>9){d=d.slice(-9)} return d}
+  function phFormat(v){var d=phDigits(v),o='+380';
+    if(d.length)o+=' '+d.slice(0,2); if(d.length>2)o+=' '+d.slice(2,5);
+    if(d.length>5)o+=' '+d.slice(5,7); if(d.length>7)o+=' '+d.slice(7,9); return o}
+  document.querySelectorAll('input[type=tel]').forEach(function(i){
+    i.setAttribute('inputmode','tel'); i.placeholder='+380 XX XXX XX XX'; i.maxLength=19;
+    i.addEventListener('focus',function(){if(!i.value)i.value='+380 '});
+    i.addEventListener('input',function(){i.value=phFormat(i.value)});
+    i.addEventListener('blur',function(){if(!phDigits(i.value))i.value=''});
+  });
+
   mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open')})});
   var modal=document.getElementById('modal'),mtitle=document.getElementById('mtitle');
   document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){
@@ -647,7 +674,9 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
     if(!err){err=document.createElement('p');err.className='err';box.appendChild(err)}
     err.textContent='';
     var phone=val(f,'phone');
-    if(phone.replace(/\D/g,'').length<9){err.textContent='Перевірте, будь ласка, номер телефону.';return}
+    if(phDigits(phone).length!==9){err.textContent='Вкажіть номер у форматі +380 XX XXX XX XX.';return}
+    var cname=val(f,'cname')||val(f,'name');
+    if(!cname){err.textContent='Напишіть, будь ласка, як до вас звертатись.';return}
 
     var parts=[];
     var car=val(f,'car'); if(car){parts.push('Авто: '+car)}
@@ -659,8 +688,8 @@ footer .bottom{display:flex;justify-content:space-between;gap:20px;padding-top:2
     if(location.hostname!==PROD){box.classList.add('sent');f.reset();return}
 
     var fd=new FormData();
-    fd.append('callback-name', val(f,'cname')||val(f,'name')||'Заявка з сайту');
-    fd.append('callback-phone', phone);
+    fd.append('callback-name', cname);
+    fd.append('callback-phone', '+380'+phDigits(phone));
     fd.append('callback-message', parts.join('. '));
     fd.append('form_type', f.getAttribute('data-form-type')||'1');
     fd.append('email_confirm', val(f,'email_confirm'));
